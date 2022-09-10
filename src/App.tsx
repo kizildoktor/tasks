@@ -46,6 +46,8 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
+            <p>Umut Kurt</p>
+            <p>Hello World</p>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
