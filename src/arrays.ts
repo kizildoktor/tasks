@@ -55,8 +55,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
     const result: string[] = messages.map((item: string): string =>
         item[item.length - 1] === "!" ? item.toUpperCase() : item
     );
-    return result.filter((item: string): boolean =>
-        item[item.length - 1] === "?" ? false : true
+    return result.filter(
+        (item: string): boolean => item[item.length - 1] !== "?"
     );
 };
 
@@ -65,7 +65,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    return words.filter((item: string): boolean => item.length < 4).length;
 }
 
 /**
@@ -73,7 +73,7 @@ export function countShortWords(words: string[]): number {
  * the colors are either 'red', 'blue', or 'green'. If an empty list is given,
  * then return true.
  */
-export function allRGB(colors: string[]): boolean {
+export function allRGB(_colors: string[]): boolean {
     return false;
 }
 
@@ -84,7 +84,7 @@ export function allRGB(colors: string[]): boolean {
  * For instance, the array [1, 2, 3] would become "6=1+2+3".
  * And the array [] would become "0=0".
  */
-export function makeMath(addends: number[]): string {
+export function makeMath(_addends: number[]): string {
     return "";
 }
 
@@ -97,6 +97,6 @@ export function makeMath(addends: number[]): string {
  * For instance, the array [1, 9, -5, 7] would become [1, 9, -5, 10, 7]
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
-export function injectPositive(values: number[]): number[] {
+export function injectPositive(_values: number[]): number[] {
     return [];
 }
