@@ -88,7 +88,19 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    let result = "0=0";
+    if (addends.length != 0) {
+        const totalValue = addends.reduce(
+            (total: number, item: number) => total + item
+        );
+        const stringified: string[] = addends.map(
+            (item: number): string => item + "+"
+        );
+        result = (totalValue + "=" + stringified)
+            .slice(0, -1)
+            .replaceAll(",", "");
+    }
+    return result;
 }
 
 /**
