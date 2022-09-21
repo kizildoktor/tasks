@@ -73,8 +73,11 @@ export function countShortWords(words: string[]): number {
  * the colors are either 'red', 'blue', or 'green'. If an empty list is given,
  * then return true.
  */
-export function allRGB(_colors: string[]): boolean {
-    return false;
+export function allRGB(colors: string[]): boolean {
+    const result: string[] = colors.filter((item: string): boolean =>
+        item !== "red" && item !== "green" && item !== "blue" ? true : false
+    );
+    return result.length > 0 ? false : true;
 }
 
 /**
@@ -84,7 +87,7 @@ export function allRGB(_colors: string[]): boolean {
  * For instance, the array [1, 2, 3] would become "6=1+2+3".
  * And the array [] would become "0=0".
  */
-export function makeMath(_addends: number[]): string {
+export function makeMath(addends: number[]): string {
     return "";
 }
 
@@ -97,6 +100,6 @@ export function makeMath(_addends: number[]): string {
  * For instance, the array [1, 9, -5, 7] would become [1, 9, -5, 10, 7]
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
-export function injectPositive(_values: number[]): number[] {
+export function injectPositive(values: number[]): number[] {
     return [];
 }
