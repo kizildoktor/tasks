@@ -63,14 +63,23 @@ export function getNames(questions: Question[]): string[] {
  * Consumes an array of questions and returns the sum total of all their points added together.
  */
 export function sumPoints(questions: Question[]): number {
-    return 0;
+    return questions.reduce(
+        (total: number, question: Question): number => question.points + total,
+        0
+    );
 }
 
 /***
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
-    return 0;
+    return questions
+        .filter((question: Question): boolean => question.published === true)
+        .reduce(
+            (total: number, question: Question): number =>
+                question.points + total,
+            0
+        );
 }
 
 /***
