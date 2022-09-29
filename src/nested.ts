@@ -216,7 +216,16 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    return [
+        ...questions.map(
+            (question: Question): Question =>
+                question.id === targetId
+                    ? newQuestionType === "short_answer_question"
+                        ? { ...question, type: newQuestionType, options: [] }
+                        : { ...question, type: newQuestionType }
+                    : question
+        )
+    ];
 }
 
 /**
