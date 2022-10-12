@@ -33,7 +33,7 @@ function App(): JSX.Element {
                             style={{
                                 width: "100px",
                                 height: "100px",
-                                backgroundColor: "red"
+                                backgroundColor: "green"
                             }}
                         ></div>
                     </Col>
