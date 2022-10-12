@@ -21,17 +21,21 @@ function App(): JSX.Element {
                 height="200"
                 alt="I like this image."
             />
-            <ol>
-                <li>Item #1.</li>
-                <li>Item #2.</li>
-                <li>Item #3.</li>
-            </ol>
+            <Container style={{ width: "25%" }}>
+                <div>
+                    <ol>
+                        <li>This is the first item in the ordered list.</li>
+                        <li>This is the second item in the ordered list.</li>
+                        <li>This is the third item in the ordered list.</li>
+                    </ol>
+                </div>
+            </Container>
             <Container>
                 <Row>
                     <Col>
                         <div
                             style={{
-                                width: "100px",
+                                width: "100%",
                                 height: "100px",
                                 backgroundColor: "green"
                             }}
@@ -40,7 +44,7 @@ function App(): JSX.Element {
                     <Col>
                         <div
                             style={{
-                                width: "100px",
+                                width: "100%",
                                 height: "100px",
                                 backgroundColor: "red"
                             }}
@@ -48,6 +52,7 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
+            <hr></hr>
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
@@ -63,6 +68,7 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
+            <hr />
         </div>
     );
 }
