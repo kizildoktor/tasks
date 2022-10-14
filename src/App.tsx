@@ -56,12 +56,12 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
-            <hr></hr>
+            <hr />
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
