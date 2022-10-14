@@ -18,7 +18,7 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <h1>Umut Kurt</h1>
+            <h1 className="titles">Umut Kurt</h1>
             <img
                 src="https://i.imgur.com/WGovLth.png"
                 width="200"
@@ -26,7 +26,7 @@ function App(): JSX.Element {
                 alt="I like this image."
             />
             <Container style={{ width: "25%" }}>
-                <div>
+                <div className="lists">
                     <ol>
                         <li>This is the first item in the ordered list.</li>
                         <li>This is the second item in the ordered list.</li>
@@ -60,7 +60,7 @@ function App(): JSX.Element {
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
-            <hr></hr>
+            <hr className="titles"></hr>
             <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
