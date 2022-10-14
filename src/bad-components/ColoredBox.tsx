@@ -25,8 +25,8 @@ function ColorPreview({ colorIndex }: colorProperties): JSX.Element {
         <div
             data-testid="colored-box"
             style={{
-                width: "50px",
-                height: "50px",
+                width: "40px",
+                height: "40px",
                 backgroundColor: COLORS[colorIndex],
                 display: "inline-block",
                 verticalAlign: "bottom",
