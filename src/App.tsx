@@ -1,6 +1,6 @@
+import "./App.css";
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import "./App.css";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
@@ -26,8 +26,8 @@ function App(): JSX.Element {
                 alt="I like this image."
             />
             <Container style={{ width: "25%" }}>
-                <div className="list">
-                    <ol>
+                <div>
+                    <ol className="sentence">
                         <li>This is the first item in the ordered list.</li>
                         <li>This is the second item in the ordered list.</li>
                         <li>This is the third item in the ordered list.</li>
@@ -56,7 +56,7 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
-            <hr />
+            <hr className="title"></hr>
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
