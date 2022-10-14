@@ -3,12 +3,16 @@
     background-color: rgb(40,20,20);
 }
 
-.lists {
+.list {
     color: yellow;
 }
 
-.titles {
+.title {
     color: magenta;
+}
+
+.sentence {
+    color: yellow;
 }
 
 .App-logo {
