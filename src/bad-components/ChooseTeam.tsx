@@ -45,7 +45,7 @@ export function ChooseTeam(): JSX.Element {
                     ))}
                 </Col>
                 <Col className="sentence">
-                    <strong>Team:</strong>
+                    <strong>Team: </strong>
                     {team.map((member: string) => (
                         <li key={member}>{member}</li>
                     ))}
