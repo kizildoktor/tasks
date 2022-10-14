@@ -18,7 +18,7 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <h1 className="titles">Umut Kurt</h1>
+            <h1 className="title">Umut Kurt</h1>
             <img
                 src="https://i.imgur.com/WGovLth.png"
                 width="200"
@@ -26,7 +26,7 @@ function App(): JSX.Element {
                 alt="I like this image."
             />
             <Container style={{ width: "25%" }}>
-                <div className="lists">
+                <div className="list">
                     <ol>
                         <li>This is the first item in the ordered list.</li>
                         <li>This is the second item in the ordered list.</li>
@@ -60,27 +60,27 @@ function App(): JSX.Element {
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
-            <hr className="titles"></hr>
+            <hr className="title"></hr>
             <DoubleHalf></DoubleHalf>
-            <hr></hr>
+            <hr className="title"></hr>
             <ChooseTeam></ChooseTeam>
-            <hr></hr>
+            <hr className="title"></hr>
             <ColoredBox></ColoredBox>
-            <hr></hr>
+            <hr className="title"></hr>
             <ShoveBox></ShoveBox>
-            <hr></hr>
+            <hr className="title"></hr>
             <Counter></Counter>
-            <hr />
+            <hr className="title"></hr>
             <RevealAnswer></RevealAnswer>
-            <hr />
+            <hr className="title"></hr>
             <StartAttempt></StartAttempt>
-            <hr />
+            <hr className="title"></hr>
             <TwoDice></TwoDice>
-            <hr />
+            <hr className="title"></hr>
             <ChangeType></ChangeType>
-            <hr />
+            <hr className="title"></hr>
             <CycleHoliday></CycleHoliday>
-            <hr />
+            <hr className="title"></hr>
         </div>
     );
 }

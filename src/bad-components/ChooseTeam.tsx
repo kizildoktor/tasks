@@ -14,35 +14,37 @@ export function ChooseTeam(): JSX.Element {
     const [allOptions, setAllOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
 
-    function chooseMember() {
-        /*
-        if (!team.includes(newMember)) {
-            team.push(newMember);
-        }
-        */
+    function chooseMember(newMember: string) {
+        setTeam([...team, newMember]);
     }
 
     function clearTeam() {
-        /*
-        team = [];
-        */
+        setTeam([]);
+        setAllOptions(PEOPLE);
     }
 
     return (
         <div>
-            <h3>Choose Team</h3>
+            <h3 className="title">Choose Team</h3>
             <Row>
                 <Col>
                     {allOptions.map((option: string) => (
-                        <div key={option} style={{ marginBottom: "4px" }}>
+                        <div
+                            key={option}
+                            style={{ marginBottom: "4px" }}
+                            className="sentence"
+                        >
                             Add{" "}
-                            <Button onClick={chooseMember} size="sm">
+                            <Button
+                                onClick={() => chooseMember(option)}
+                                size="sm"
+                            >
                                 {option}
                             </Button>
                         </div>
                     ))}
                 </Col>
-                <Col>
+                <Col className="sentence">
                     <strong>Team:</strong>
                     {team.map((member: string) => (
                         <li key={member}>{member}</li>
