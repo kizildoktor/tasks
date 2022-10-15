@@ -12,9 +12,9 @@ export function CheckAnswer({
     }
     return (
         <div>
-            <h3>Check Answer</h3>
+            <h3 className="title">Check Answer</h3>
             <Form.Group controlId="checkInputAnswer">
-                <Form.Label>Enter Input: </Form.Label>
+                <Form.Label className="sentence">Enter Input: </Form.Label>
                 <Form.Control value={userInput} onChange={updateInput} />
             </Form.Group>
             {expectedAnswer === userInput ? "✔️" : "❌"}
