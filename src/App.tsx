@@ -11,6 +11,11 @@ import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): JSX.Element {
     return (
@@ -60,6 +65,19 @@ function App(): JSX.Element {
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
+            <hr className="title"></hr>
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            <hr className="title"></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr className="title"></hr>
+            <EditMode></EditMode>
+            <hr className="title"></hr>
+            <ChangeColor></ChangeColor>
+            <hr className="title"></hr>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
             <hr className="title"></hr>
             <DoubleHalf></DoubleHalf>
             <hr className="title"></hr>
